@@ -18,11 +18,6 @@ describe('supervisor-q', function (done) {
       res.type('text')
       res.status(404).end('NOT FOUND');
     });
-    app.get('/shutup', function (req, res) {
-      req.socket.close();
-      //res.type('text')
-      //res.status(404).end('NOT FOUND');
-    });
     addr = app.listen(null, done).address();
     prefix = 'http://' + addr.address + ':' + addr.port;
   });
