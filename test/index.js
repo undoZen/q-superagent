@@ -6,7 +6,7 @@ var express = require('express');
 
 var Q = require('q');
 
-describe('supervisor-q', function (done) {
+describe('q-superagent', function (done) {
   var addr, prefix;
   before(function (done) {
     app = express();
