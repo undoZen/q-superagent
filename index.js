@@ -1,3 +1,5 @@
+'use strict';
+
 var Q = require('q');
 
 module.exports = function (request) {
@@ -9,3 +11,7 @@ module.exports = function (request) {
 
   return request;
 };
+
+if ('undefined' != typeof superagent) {
+  module.exports(superagent);
+}
